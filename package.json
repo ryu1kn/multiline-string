@@ -1,0 +1,12 @@
+{
+  "name": "multiline-string",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "tape test/**/*.test.js"
+  },
+  "devDependencies": {
+    "tape": "^4.9.0"
+  }
+}
