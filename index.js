@@ -1,5 +1,5 @@
 const NEWLINE = '\n'
-const INDENT_PATTERN = new RegExp(`^${NEWLINE}([ \t]*)`)
+const INDENT_PATTERN = new RegExp(`^${NEWLINE}+([ \t]*)`)
 
 module.exports = options => {
   const marginChar = (options || {}).marginChar || ''

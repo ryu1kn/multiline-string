@@ -9,6 +9,19 @@ LINE1`)
     expect(str).to.eql('LINE1')
   })
 
+  it('does nothing if given string does not begin with newline', () => {
+    const str = defaultMultiline(`LINE1`)
+    expect(str).to.eql('LINE1')
+  })
+
+  it('uses the indent size of the first non-empty line', () => {
+    const str = defaultMultiline(`
+
+      LINE1
+      LINE2`)
+    expect(str).to.eql('\nLINE1\nLINE2')
+  })
+
   it('removes all leading space characters', () => {
     const str = defaultMultiline(`
               LINE1`)
@@ -54,10 +67,5 @@ LINE1`)
         | ***
         |*****`)
     expect(str).to.eql('  *\n ***\n*****')
-  })
-
-  it('does nothing if given string does not begin with newline', () => {
-    const str = defaultMultiline(`LINE1`)
-    expect(str).to.eql('LINE1')
   })
 })
