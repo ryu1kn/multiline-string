@@ -5,9 +5,8 @@ test('it ignores the first empty line', t => {
   t.plan(1)
 
   const str = multiline(`
-LINE1
-`)
-  t.equal(str, 'LINE1\n')
+LINE1`)
+  t.equal(str, 'LINE1')
 })
 
 test('it removes all leading space characters', t => {
