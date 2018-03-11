@@ -55,4 +55,9 @@ LINE1`)
         |*****`)
     expect(str).to.eql('  *\n ***\n*****')
   })
+
+  it('does nothing if given string does not begin with newline', () => {
+    const str = defaultMultiline(`LINE1`)
+    expect(str).to.eql('LINE1')
+  })
 })
