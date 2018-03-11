@@ -68,4 +68,12 @@ LINE1`)
         |*****`)
     expect(str).to.eql('  *\n ***\n*****')
   })
+
+  it('does nothing if it encounters non-margin-mark or non-spaces first', () => {
+    const multiline = createMultiline({ marginMark: '|' })
+    const str = multiline(`
+      x |  *
+        | ***`)
+    expect(str).to.eql('      x |  *\n        | ***')
+  })
 })
