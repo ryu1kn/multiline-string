@@ -10,22 +10,47 @@ Remove leading space characters to let you nicely indent your multiline string i
 
 ## Usage
 
+By default, `multiline` detects indentation by looking at the first non-empty line.
+Notice that the first empty line is dropped from the output allowing you to start
+the first line with whatever indentation level you like.
+
 ```js
 const multiline = require('multiline-string')()
 
 const s = multiline(`
-            * Item 1
-              * Item 1-1
-            * Item 2
+            1. xxx
+              a. yyy
+            2. zzz
             `)
 
 console.log(s)
+// => "1. xxx\n  a. yyy\n2. zzz"
 ```
 
-This prints out:
+If you want to start your string with an empty line, you can do:
 
+```js
+const s = multiline(`
+
+            Line 1
+            Line 2
+            `)
+// => "\nLine 1\nLine 2\n"
 ```
-* Item 1
-  * Item 1-1
-* Item 2
+
+You can also give a character that marks the start of each line
+to include indentation in the resulting text
+
+```js
+const multiline = require('multiline-string')({ marginChar: '|' })
+
+const s = multiline(`
+            |  Usage: my-command file
+            |
+            |    -v, --version    Show version
+            |    -h, --help       Show help information
+            |`)
+
+console.log(s)
+// => "  Usage: ..."
 ```
