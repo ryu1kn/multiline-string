@@ -1,5 +1,5 @@
 const NEWLINE = '\n'
-const MULTILINE_PATTERN = new RegExp(`^${NEWLINE}( *)`)
+const MULTILINE_PATTERN = new RegExp(`^${NEWLINE}([ \t]*)`)
 
 function multiline (text) {
   const match = text.match(MULTILINE_PATTERN)

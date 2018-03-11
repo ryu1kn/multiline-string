@@ -27,3 +27,14 @@ test('it sets the indent of the 2nd line as the indent for all lines', t => {
               `)
   t.equal(str, '- LINE1\n  - LINE2\n- LINE3\n')
 })
+
+test('it recognises tabs as an indent', t => {
+  t.plan(1)
+
+  /* eslint-disable no-tabs */
+  const str = multiline(`
+		- LINE1
+		- LINE2`)
+  /* eslint-enable no-tabs */
+  t.equal(str, '- LINE1\n- LINE2')
+})
