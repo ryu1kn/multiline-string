@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ryu1kn/multiline-string.svg?branch=master)](https://travis-ci.org/ryu1kn/multiline-string)
 
 # multiline-string
 
