@@ -9,5 +9,6 @@
 /.travis.yml
 /coverage
 /test/.eslintrc.yaml
+/yarn.lock
 __*
 yarn-error.log
