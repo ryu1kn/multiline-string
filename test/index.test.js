@@ -31,4 +31,18 @@ LINE1`)
     /* eslint-enable no-tabs */
     expect(str).to.eql('- LINE1\n- LINE2')
   })
+
+  it('removes indents only if it is the same with the first indent', () => {
+    const str = multiline(`
+        - LINE1
+      x - LINE2`)
+    expect(str).to.eql('- LINE1\n      x - LINE2')
+  })
+
+  it('does not remove matching spaces if they appear in the middle of a line', () => {
+    const str = multiline(`
+        - LINE1
+      - LINE2        x`)
+    expect(str).to.eql('- LINE1\n      - LINE2        x')
+  })
 })
