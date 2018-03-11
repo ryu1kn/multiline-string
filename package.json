@@ -1,6 +1,7 @@
 {
   "name": "multiline-string",
   "version": "0.1.0",
+  "description": "Nicer look for multiline string",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,6 +9,20 @@
     "test": "tape test/**/*.test.js",
     "coverage": "nyc tape test/**/*.test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryu1kn/multiline-string.git"
+  },
+  "keywords": [
+    "multiline",
+    "string"
+  ],
+  "author": "Ryuichi Inagaki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryu1kn/multiline-string/issues"
+  },
+  "homepage": "https://github.com/ryu1kn/multiline-string#readme",
   "devDependencies": {
     "eslint": "^4.18.2",
     "eslint-config-standard": "^11.0.0",
