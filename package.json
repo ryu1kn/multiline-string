@@ -5,9 +5,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "check": "yarn run lint && yarn test",
     "lint": "eslint .",
     "test": "mocha test --recursive",
-    "coverage": "nyc mocha test --recursive"
+    "coverage": "nyc yarn test"
   },
   "repository": {
     "type": "git",

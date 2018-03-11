@@ -7,8 +7,7 @@ node_js:
 install:
   - yarn install
 script:
-  - yarn run lint
-  - yarn test
+  - yarn run check
 notifications:
   email:
     on_success: change
