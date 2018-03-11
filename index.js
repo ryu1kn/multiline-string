@@ -1,14 +1,17 @@
 const NEWLINE = '\n'
-const MULTILINE_PATTERN = new RegExp(`^${NEWLINE}([ \t]*)`)
+const INDENT_PATTERN = new RegExp(`^${NEWLINE}([ \t]*)`)
 
-function multiline (text) {
-  const match = text.match(MULTILINE_PATTERN)
-  const indent = match[1]
-  return text
-    .split(NEWLINE)
-    .slice(1)
-    .map(line => (line.startsWith(indent) ? line.replace(indent, '') : line))
-    .join(NEWLINE)
+const dropLeading = leading => line =>
+  line.startsWith(leading) ? line.replace(leading, '') : line
+
+module.exports = options => {
+  const marginChar = (options || {}).marginChar || ''
+  return text => {
+    const match = text.match(INDENT_PATTERN)
+    return text
+      .split(NEWLINE)
+      .slice(1)
+      .map(dropLeading(match[1] + marginChar))
+      .join(NEWLINE)
+  }
 }
-
-module.exports = () => multiline
