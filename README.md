@@ -2,7 +2,7 @@
 
 # multiline-string
 
-Remove leading space characters to let you nicely indent your multiline string in your code.
+Remove leading space characters to let you nicely indent your multiline strings in your code.
 
 ## Prerequisite
 
@@ -11,8 +11,8 @@ Remove leading space characters to let you nicely indent your multiline string i
 ## Usage
 
 By default, `multiline` detects indentation by looking at the first non-empty line.
-Notice that the first empty line is dropped from the output allowing you to start
-the first line with whatever indentation level you like.
+Notice that the first empty line is dropped from the output to let you to start
+the first line with the indentation level you like.
 
 ```js
 const multiline = require('multiline-string')()
