@@ -52,5 +52,5 @@ const s = multiline(`
             |`)
 
 console.log(s)
-// => "  Usage: ..."
+// => "  Usage: ...\n\n    -v, --version ..."
 ```
