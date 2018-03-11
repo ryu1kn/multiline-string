@@ -1,0 +1,5 @@
+env:
+  mocha: true
+rules:
+  max-len: off
+  no-unused-expressions: off

@@ -1,40 +1,34 @@
-const test = require('tape')
+const expect = require('chai').expect
 const multiline = require('../index')()
 
-test('it ignores the first empty line', t => {
-  t.plan(1)
-
-  const str = multiline(`
+describe('multiline', () => {
+  it('ignores the first empty line', () => {
+    const str = multiline(`
 LINE1`)
-  t.equal(str, 'LINE1')
-})
+    expect(str).to.eql('LINE1')
+  })
 
-test('it removes all leading space characters', t => {
-  t.plan(1)
-
-  const str = multiline(`
+  it('removes all leading space characters', () => {
+    const str = multiline(`
               LINE1`)
-  t.equal(str, 'LINE1')
-})
+    expect(str).to.eql('LINE1')
+  })
 
-test('it sets the indent of the 2nd line as the indent for all lines', t => {
-  t.plan(1)
-
-  const str = multiline(`
+  it('sets the indent of the 2nd line as the indent for all lines', () => {
+    const str = multiline(`
               - LINE1
                 - LINE2
               - LINE3
               `)
-  t.equal(str, '- LINE1\n  - LINE2\n- LINE3\n')
-})
+    expect(str).to.eql('- LINE1\n  - LINE2\n- LINE3\n')
+  })
 
-test('it recognises tabs as an indent', t => {
-  t.plan(1)
-
-  /* eslint-disable no-tabs */
-  const str = multiline(`
+  it('recognises tabs as an indent', () => {
+    /* eslint-disable no-tabs */
+    const str = multiline(`
 		- LINE1
 		- LINE2`)
-  /* eslint-enable no-tabs */
-  t.equal(str, '- LINE1\n- LINE2')
+    /* eslint-enable no-tabs */
+    expect(str).to.eql('- LINE1\n- LINE2')
+  })
 })
