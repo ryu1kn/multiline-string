@@ -38,11 +38,11 @@ const s = multiline(`
 // => "\nLine 1\nLine 2\n"
 ```
 
-You can also give a character that marks the start of each line
-to include indentation in the resulting text
+You can also give `marginMark` to identify the start of each line
+to include indentation in the resulting text.
 
 ```js
-const multiline = require('multiline-string')({ marginChar: '|' })
+const multiline = require('multiline-string')({ marginMark: '|' })
 
 const s = multiline(`
             |  Usage: my-command file

@@ -2,10 +2,10 @@ const NEWLINE = '\n'
 const INDENT_PATTERN = new RegExp(`^${NEWLINE}+([ \t]*)`)
 
 module.exports = options => {
-  const marginChar = (options || {}).marginChar || ''
+  const marginMark = (options || {}).marginMark || ''
   return text => {
     const match = text.match(INDENT_PATTERN)
-    const process = match ? dropLeadings(match[1] + marginChar) : id
+    const process = match ? dropLeadings(match[1] + marginMark) : id
     return process(text)
   }
 }

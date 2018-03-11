@@ -61,7 +61,7 @@ LINE1`)
   })
 
   it('drops all characters until it encounters the first margin character', () => {
-    const multiline = createMultiline({ marginChar: '|' })
+    const multiline = createMultiline({ marginMark: '|' })
     const str = multiline(`
         |  *
         | ***
