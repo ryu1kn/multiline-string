@@ -1,0 +1,13 @@
+/.editorconfig
+/.eslintignore
+/.eslintrc.yaml
+/.gitignore
+/.idea
+/.npmignore
+/.nyc_output
+/.nycrc
+/.travis.yml
+/coverage
+/test/.eslintrc.yaml
+__*
+yarn-error.log
