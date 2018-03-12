@@ -8,6 +8,7 @@
 /.nycrc
 /.travis.yml
 /coverage
+/tag-release.sh
 /test/.eslintrc.yaml
 /yarn.lock
 __*

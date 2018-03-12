@@ -8,6 +8,8 @@
     "check": "yarn run lint && yarn test",
     "lint": "eslint .",
     "test": "mocha test --recursive",
+    "prepublish": "yarn run check",
+    "postpublish": "./tag-release.sh",
     "coverage": "nyc yarn test"
   },
   "repository": {
