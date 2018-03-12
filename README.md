@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ryu1kn/multiline-string.svg?branch=master)](https://travis-ci.org/ryu1kn/multiline-string)
+[![Coverage Status](https://coveralls.io/repos/github/ryu1kn/multiline-string/badge.svg?branch=master)](https://coveralls.io/github/ryu1kn/multiline-string?branch=master)
 
 # multiline-string
 
