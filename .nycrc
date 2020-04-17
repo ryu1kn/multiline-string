@@ -2,7 +2,8 @@
   "exclude": [
     "**/__*",
     "coverage",
-    "test"
+    "test",
+    "test-release"
   ],
   "all": true,
   "reporter": [
