@@ -10,7 +10,7 @@ LINE1`)
   })
 
   it('does nothing if given string does not begin with newline', () => {
-    const str = defaultMultiline(`LINE1`)
+    const str = defaultMultiline('LINE1')
     expect(str).to.eql('LINE1')
   })
 
