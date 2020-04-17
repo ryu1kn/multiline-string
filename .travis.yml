@@ -1,14 +1,14 @@
 sudo: false
 language: node_js
 node_js:
-  - "4"
-  - "6"
-  - "8"
+  - "10"
+  - "12"
 install:
   - yarn install
 script:
   - yarn run lint
   - yarn run coverage
+  - yarn run test:release
 after_script:
   - cat coverage/lcov.info | node_modules/.bin/coveralls
 notifications:

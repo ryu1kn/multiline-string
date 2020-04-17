@@ -1,0 +1,7 @@
+{
+  "name": "multiline-string-driver",
+  "private": true,
+  "scripts": {
+    "test": "node test"
+  }
+}
