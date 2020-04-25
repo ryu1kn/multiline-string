@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Nicer look for multiline strings in the code",
   "main": "index.js",
+  "types": "typings/index.d.ts",
   "license": "MIT",
   "scripts": {
     "check": "yarn run lint && yarn test",
