@@ -1,6 +1,6 @@
 {
   "name": "multiline-string",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Nicer look for multiline strings in the code",
   "main": "index.js",
   "types": "typings/index.d.ts",
