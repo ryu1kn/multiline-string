@@ -1,7 +1,7 @@
-declare type Options = {
+declare interface MultilineStringOptions {
   marginMark?: string;
-};
+}
 
-declare type MultilineString = (options?: Options) => (text: string) => string;
+declare function createMultilineString(options?: MultilineStringOptions): (text: string) => string;
 
-export = MultilineString;
+export = createMultilineString;
