@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/ryu1kn/multiline-string#readme",
   "files": [
-    "index.js"
+    "index.js",
+    "typings/*.d.ts"
   ],
   "devDependencies": {
     "coveralls": "^3.0.11",
